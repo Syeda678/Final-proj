@@ -1,10 +1,12 @@
+#root {
+  background-color: whitesmoke;
+}
+
 body {
-  /*margin: 0; */
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
@@ -13,20 +15,95 @@ code {
 }
 
 /*// NavBar styling //*/
-.custom-btn-toolbar {
-  background-color: gray !important;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 10%;
+  background-color: white;
+  height: 23px;
 }
-
 .logo {
-  background-color: unset !important;
+  cursor: pointer;
+  font-size: 25px;
+  color: orange;
+  text-decoration: none;
 }
 
-.btn {
-  margin-right: 1em !important;
-  padding: 5px !important;
-  background-color: black !important;
-  border: unset !important;
-  color: white !important;
+a,
+li {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  line-height: 23px;
+  letter-spacing: -0.346154px;
+  color: grey;
+}
+
+.nav_tabs ul {
+  list-style: none;
+  margin-bottom: unset;
+}
+.nav_tabs li {
+  display: inline-block;
+  padding: 0px 20px;
+  text-decoration: none;
+}
+.nav_tabs a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+.nav_tabs a:hover {
+  color: orange;
+}
+
+/*// Home component styling //*/
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 5%;
+  margin-bottom: 2rem;
+}
+
+.title-home {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: unset;
+  margin-top: auto;
+}
+.title-text {
+  margin: auto;
+  font-size: larger;
+  letter-spacing: 2px;
+}
+
+/* Cart */
+.cart-btn {
+  border: none;
+  background-color: lightgray;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+.cart-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* About component stylin */
+.container2 {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 10%;
+}
+
+.textbox {
+  border: solid 1px lightgray;
+  border-radius: 3px;
+  padding: 10px;
 }
 
 /* Modal styling */
@@ -57,15 +134,22 @@ code {
 }
 
 .content {
-  width: fit-content;
   margin: auto;
 }
 
 .modal-content {
-  background-color: grey;
+  background-color: white;
+  height: 30%;
+  width: 50%;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+.modal-context {
+  background-color: white;
   height: 30%;
   width: 30%;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 20px;
   border-radius: 5px;
 }
@@ -79,7 +163,7 @@ code {
 }
 
 .close {
-  color: #aaa;
+  color: white;
   float: right;
   margin-right: 10%;
   font-size: 28px;
@@ -118,9 +202,12 @@ form {
 input,
 textarea {
   min-height: 32px;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px; */
   padding-left: 7px;
   border-radius: 5px;
+}
+.input-field {
+  margin-bottom: 10px;
 }
 select {
   min-height: 32px;
@@ -179,4 +266,22 @@ textarea {
 .checkbox-label {
   display: flex;
   align-items: center;
+}
+
+/* Footer-styling */
+.container1 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.container1 .icons {
+  font-size: 30px;
+  margin-right: 3rem;
+  color: grey;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+.icons:hover {
+  color: orange;
 }

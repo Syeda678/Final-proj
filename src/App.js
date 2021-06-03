@@ -6,13 +6,14 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Cart from "./components/cart/Cart";
 
+import "./index.css";
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
       <NavBar />
-      <Switch>
+      <Switch className="body">
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/contact" exact component={Contact} />

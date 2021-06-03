@@ -1,5 +1,3 @@
-import ButtonToolbar from "react-bootstrap/ButtonToolbar";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import Cart from "./cart/Cart";
 import { useState } from "react";
@@ -8,22 +6,32 @@ const NavBar = () => {
   const [cart, setCart] = useState([]);
 
   return (
-    <ButtonToolbar className="custom-btn-toolbar">
+    <div className="header">
       <Link to="/">
-        <Button className="logo">Home</Button>
+        <a href="#" class="logo">
+          The Fitness Zone
+        </a>
       </Link>
-      <Link to="/about">
-        <Button>About</Button>
-      </Link>
-      <Link to="/contact">
-        <Button>Contact</Button>
-      </Link>
-      <Link to="/cart">
-        <Button cart={cart} className="cart">
-          Cart ({Cart.length})
-        </Button>
-      </Link>
-    </ButtonToolbar>
+      <nav>
+        <ul class="nav_tabs">
+          <li>
+            <Link to="/about">
+              <a href="#">About</a>
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact">
+              <a href="#">Contact</a>
+            </Link>
+          </li>
+          <li>
+            <Link to="/cart" cart={cart} className="cart">
+              <a href="#">Cart ({Cart.length})</a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 
